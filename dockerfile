@@ -1,4 +1,3 @@
 FROM tomcat:latest
-ADD ./target/*.war usr/local/tomcat/webapp/dockeransible.war
+ADD ./target/*.war usr/local/tomcat/webapp/*.war
 EXPOSE 8080
-CDM ["cataline.sh","run"]
