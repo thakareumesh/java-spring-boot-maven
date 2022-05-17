@@ -1,3 +1,3 @@
 FROM tomcat:latest
-
-EXPOSE 8090
+ADD ./target/*.jar usr/local/tomcat/webapp/*.jar
+EXPOSE 8080
