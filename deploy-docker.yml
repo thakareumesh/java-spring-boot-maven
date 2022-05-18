@@ -1,6 +1,7 @@
 ---
 - hosts: dev
   become: true
+  gathet_facts: yes
   tasks:
    - name: install python pip
      yum:
