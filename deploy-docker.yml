@@ -19,7 +19,7 @@
      docker_container:
        name: projectfinal
        image: "umesh4321/projectfinal:{{DOCKER_TAG}}"
-     imagePullSecrets:
+       imagePullSecrets:
        name: docker-hub-fi
        state: started
        published_ports:
