@@ -1,5 +1,3 @@
-FROM ubuntu
-RUN apt-get update -y
-RUN apt-get install httpd
-RUN service httpd start 
-ADD ./target/*.jar /var/www/html/*.jar
+FROM tomcat:latest
+ADD ./target/*.jar usr/local/tomcat/webapps/*.jar
+EXPOSE 8080
