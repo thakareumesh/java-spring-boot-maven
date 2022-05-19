@@ -19,6 +19,8 @@
      docker_container:
        name: projectfinal
        image: "umesh4321/projectfinal:{{DOCKER_TAG}}"
+     imagePullSecrets:
+       name: docker-hub-fi
        state: started
        published_ports:
        - "8080:80"
