@@ -26,4 +26,4 @@
        published_ports:
        - "8080:80"
        tty: true
-       detach: true  
+       detach: true
