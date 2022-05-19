@@ -17,7 +17,7 @@
        image: "umesh4321/projectfinal:{{DOCKER_TAG}}"
        state: started
        published_ports:
-       - "8080:80"
+       - 0.0.0.0:8080:8080
        command: sleep infinity
        tty: true
        detach: true
