@@ -2,10 +2,6 @@
 - hosts: dev
   become: true
   tasks:
-   - name: install python pip
-     yum:
-       name: python-pip
-       state: present
    - name: start docker
      service:
        name: docker
