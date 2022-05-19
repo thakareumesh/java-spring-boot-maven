@@ -18,5 +18,6 @@
        state: started
        published_ports:
        - "8080:80"
+       command: sleep infinity
        tty: true
        detach: true
