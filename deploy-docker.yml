@@ -9,8 +9,8 @@
        enabled: yes
    - name: start the container
      docker_container:
-       name: verpro
-       image: "umesh4321/verpro:{{DOCKER_TAG}}"
+       name: vertech
+       image: "umesh4321/vertech:{{DOCKER_TAG}}"
        state: started
        published_ports:
        - 0.0.0.0:8080:8080
