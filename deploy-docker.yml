@@ -9,11 +9,11 @@
        enabled: yes
    - name: start the container
      docker_container:
-       name: projectfinal
-       image: "umesh4321/projectfinal:{{DOCKER_TAG}}"
+       name: verpro
+       image: "umesh4321/verpro:{{DOCKER_TAG}}"
        state: started
        published_ports:
-       - 0.0.0.0:8080:8888
+       - 0.0.0.0:8080:8080
        command: sleep infinity
        tty: true
        detach: true
