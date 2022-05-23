@@ -12,3 +12,4 @@
      command: docker push umesh4321/simple-devops-image
    - name: remove docker image from docker server
      command: docke rmi tomcat simple-devops-image:latest umesh4321/simple-devops-image
+     ignore_errors: yes
