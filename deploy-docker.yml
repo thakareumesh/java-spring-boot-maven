@@ -1,19 +1,17 @@
 ---
-- hosts: dev
-  become: true
+- hosts: all
+  become: yes
   tasks:
-   - name: start docker
-     service:
-       name: docker
-       state: started
-       enabled: yes
-   - name: start the container
-     docker_container:
-       name: vertech
-       image: "umesh4321/vertech:{{DOCKER_TAG}}"
-       state: started
-       published_ports:
-       - 0.0.0.0:8080:8080
-       command: sleep infinity
-       tty: true
-       detach: true
+   - name: stop running container
+     command: docker stop simple-devops-container
+     ignore_errors: yes
+   - name: remove stop docker container
+     command: docker rm simple-devops-container
+     ignore_errors: yes
+   - name: remove current docker image
+     command: docker rmi umesh4321/simple-devops-image:latest
+     ignore_errors: yes
+   - name: pull docker image from dockerhub
+     command: docker pull umesh4321/simple-devops-image:latest
+   - name: create docker container
+     command: docker run -d --name simple-devops-container -p 8080:8080 umesh4321/simple-devops-image:latest
