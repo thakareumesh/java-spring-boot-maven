@@ -11,5 +11,5 @@
    - name: push image on to docker hub
      command: docker push umesh4321/simple-devops-image
    - name: remove image from ansible server
-     command: docker rmi simple-devops-image:latest umesh4321/simple-devops-image
+     command: docker rmi tomcat simple-devops-image:latest umesh4321/simple-devops-image
      ignore_errors: yes
