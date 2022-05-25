@@ -2,4 +2,4 @@ FROM tomcat:latest
 
 MAINTAINER "Umesh"
 
-COPY ./target/*.jar usr/local/tomcat/webapps
+COPY opt/docker/*.jar usr/local/tomcat/webapps
